@@ -104,7 +104,10 @@ footer {
     }
 
     main.xs--login {
-        padding: 4px 10px 60px !important;
+        padding: 20px 10px 60px !important;
+    }
+    .box-info {
+      order: 2;
     }
 
 }

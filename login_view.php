@@ -12,71 +12,102 @@ Login
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
-h1{
+
+h1 {
     font-size: 26px;
     font-weight: 700;
-}    
-.navbar, footer {
+}
+
+.navbar,
+footer {
     display: none !important;
 }
+
 .login-title {
-        text-transform: uppercase;
-        font-family: "Poppins", Sans-serif;
-        font-weight: bold;
-        color: #1b651b;
-    }
-    h5.card-title {
+    text-transform: uppercase;
+    font-family: "Poppins", Sans-serif;
+    font-weight: bold;
+    color: #1b651b;
+}
+
+h5.card-title {
     color: #fff !important;
     background-color: #1b651b;
     padding: 13px;
     margin: -16px;
-   } 
-    span.login-title{
-        color: #fff !important;
-    }
-    .area-wrapper {
-      height: 100dvh;
-    }
-   .area-wrapper {
+}
+
+span.login-title {
+    color: #fff !important;
+}
+
+.area-wrapper {
+    height: 100dvh;
+}
+
+.area-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    }
-    .box-info {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.box-info {
     padding: 20px;
 }
-    .card-body {
-    border-top: 1px solid #0000002e; 
-     }
- .card {
+
+.card-body {
+    border-top: 1px solid #0000002e;
+}
+
+.card {
     box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 6%) !important;
     -webkit-box-shadow: 6px 6px 5px 0px rgb(0 0 0 / 13%) !important;
     -moz-box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 6%) !important;
     background-color: #fff !important;
-   }
-    .jea-bg-image {
-        background-color: #f7f7f7 !important;
-     }
+}
 
-    button {
-     padding: 11px !important;
-     font-weight: 700 !important;
-   }
-  
+.jea-bg-image {
+    background-color: #f7f7f7 !important;
+}
+
+button {
+    padding: 11px !important;
+    font-weight: 700 !important;
+}
+
 form {
     padding: 0px 20px;
 }
-    footer{
-        display: none;
+
+footer {
+    display: none;
+}
+
+@media all and (max-width: 799px) {
+    h1 {
+        text-align: center;
     }
+
+    main.xs--login {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    main.xs--login {
+        padding: 4px 10px 60px !important;
+    }
+
+}
 </style>
 <?= $this->endSection(); ?>
 
@@ -86,24 +117,24 @@ form {
       
     <div class="jea-blur pb-5 area-wrapper"> 
         <main class="xs--login container d-flex justify-content-center pt-5">
-            <div class="col-12 col-md-8 col-lg-8 col-xl-5 box-info">
+            <div class="col-12 col-md-12 col-lg-4 col-xl-6 box-info">
                 <h1>Welcome to <span class="green">CvSU Silang<span> Student Portal</h1>
                  <div class="txtbox--ac">
                     <br>
-                    <p>For <span class="green">new student</span> portal registration, <a href="/register">Register</a></p>
+                    <p>For <span class="fw-bold green">new student</span> portal registration, <a href="/register">Register</a></p>
                 </div>
                 <div class="txtbox--ac">
                     <p>Sign up for the student portal using your university-provided student email to conveniently browse through your grades and  view your enrolled subjects online</p>
-                    <p>For <span class="green">new enrollment</span>, <a href="https://apps.cvsu.edu.ph/" target="_blank">click here</a></p>
+                    <p>For <span class="fw-bold green">new enrollment</span>, <a href="https://apps.cvsu.edu.ph/" target="_blank">click here</a></p>
                 </div>
                 <div class="txtbox--ac">
-                    <p><span class="green">Exciting news!</span> We’re thrilled to announce that we are now accepting  applications at Cavite State University – Silang Campus. Join us on the journey to unlock your potential and pursue academic excellence. Last day of Application is on March 14, 2024</p>
+                    <p><span class="fw-bold green">Exciting news!</span> We’re thrilled to announce that we are now accepting  applications at Cavite State University – Silang Campus. Join us on the journey to unlock your potential and pursue academic excellence. Last day of Application is on March 14, 2024</p>
                     <p>For student portal concerns: E-mail the Webmaster at <a href="mailto:webmaster@cvsu-silang.edu.ph">webmaster@cvsu-silang.edu.ph</a></p>
                 </div>
             </div>
-            <div class="card col-12 col-md-4 col-lg-4 col-xl-5 shadow-sm bg-light bg-opacity-75">
-                <div class="py-3 px-0 bg-opacity-75">
-                    <?= $this->include('partials/inc_cvsulogo'); ?>
+            <div class="card col-12 col-md-12 col-lg-4 col-xl-4 shadow-sm bg-light bg-opacity-75">
+                <div class="py-3 px-0 bg-opacity-75 text-center">
+                    <img src="/assets/images/cvsu-silang-logo.png">
                 </div>
                 <div class="card-body">
                     <?php if (isset($failed_login)) : ?>
@@ -139,10 +170,7 @@ form {
                     <div class="d-grid col-12 col-md-12 mx-auto m-3">
                         <button type="submit" class="btn btn-success btn-block">Login</button>
                     </div>
-
                     <!-- <p class="text-center">Forgot your password? <a href="http://localhost:8080/login/magic-link">Use a Login Link</a></p> -->
-
-                    <p class="text-center text-uppercase"><a href="/register">Register</a></p>
                     <?= form_close(); ?>
                 </div>
               

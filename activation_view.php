@@ -6,12 +6,10 @@ Activation
 
 <?= $this->section('content') ;?>
  <?= $this->include('partials/inc_navbar') ;?>
-<style> 
-    
+<style>    
 main{
    height: 100vh;
 }
-
 </style>
 
     <main class="container">
